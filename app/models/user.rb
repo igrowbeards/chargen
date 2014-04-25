@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
 	private
 		def add_user_role
 			self.add_role :user
+			self.save
 		end
 end
