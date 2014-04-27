@@ -1,0 +1,10 @@
+%h1= @race.name.titleize
+%p= @race.description
+%h2 Ability Modifiers
+%ul
+-	@race.modifiers.each do |m|
+	%li= m
+%p
+	= link_to 'Edit', edit_race_path(@race)
+	\|
+	= link_to 'Back', races_path

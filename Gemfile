@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'thin'
 gem 'cancancan', '~> 1.7'
 gem "rolify"
+gem 'high_voltage', '~> 2.1.0'
 
 group :development do
   gem 'better_errors'

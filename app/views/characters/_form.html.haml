@@ -1,8 +1,43 @@
 = simple_form_for(@character) do |f|
-  = f.error_notification
-
-  .form-inputs
-    = f.input :name
-
-  .form-actions
-    = f.button :submit
+  .form_group
+    .row
+      = f.error_notification
+  .form_group
+    .row
+      .col-md-4
+        = f.input :name
+      .col-md-4
+        = f.association :race
+  %hr
+  .form_group
+    .row
+      .col-md-2
+        = f.input :strength
+      .col-md-2
+        = f.input :dexterity
+      .col-md-2
+        = f.input :constitution
+      .col-md-2
+        = f.input :intelligence
+      .col-md-2
+        = f.input :wisdom
+      .col-md-2
+        = f.input :charisma
+  %hr
+  .form_group
+    .row
+      .col-md-3
+        = f.input :eye_color
+      .col-md-3
+        = f.input :hair_color
+      .col-md-3
+        = f.input :height
+      .col-md-3
+        = f.input :weight
+    .row
+      .col-md-12
+        = f.input :description
+  %hr
+  .row
+    .form_group.col-md-12
+      = f.button :submit

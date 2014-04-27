@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  str-adjust: 1
+  dex-adjust: 1
+  con-adjust: 1
+  int-adjust: 1
+  wis-adjust: 1
+  chr-adjust: 1
+  description: MyText
+
+two:
+  name: MyString
+  str-adjust: 1
+  dex-adjust: 1
+  con-adjust: 1
+  int-adjust: 1
+  wis-adjust: 1
+  chr-adjust: 1
+  description: MyText

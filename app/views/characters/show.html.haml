@@ -1,8 +1,50 @@
-%p#notice= notice
-
+%h1
+	= @character.name
 %p
-  %b Name:
-  = @character.name
+	%b Player:
+	= @character.user.name
+%p
+	%b Race:
+	= @character.race.name
+%h2 Stats
+%dl.dl-horizontal
+	%dt STR:
+	%dd
+		= @character.strength
+	%dt CON:
+	%dd
+		= @character.constitution
+	%dt DEX:
+	%dd
+		= @character.dexterity
+	%dt INT:
+	%dd
+		= @character.intelligence
+	%dt WIS:
+	%dd
+		= @character.wisdom
+	%dt CHA:
+	%dd
+		= @character.charisma
+%h2 Description
+%dl
+	%dt Hair Color:
+	%dd
+		= @character.hair_color
+	%dt Eye Color:
+	%dd
+		= @character.eye_color
+	%dt Height:
+	%dd
+		= @character.height
+	%dt Weight:
+	%dd
+		= @character.weight
+	%dt Description:
+	%dd
+		= @character.description
+
+
 
 = link_to 'Edit', edit_character_path(@character)
 \|

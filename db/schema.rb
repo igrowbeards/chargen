@@ -11,13 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425191320) do
+ActiveRecord::Schema.define(version: 20140426170020) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "strength"
+    t.integer  "dexterity"
+    t.integer  "constitution"
+    t.integer  "intelligence"
+    t.integer  "wisdom"
+    t.integer  "charisma"
+    t.string   "eye_color"
+    t.string   "hair_color"
+    t.integer  "height"
+    t.integer  "weight"
+    t.text     "description"
+    t.integer  "race_id"
+  end
+
+  create_table "races", force: true do |t|
+    t.string   "name"
+    t.integer  "str_adjust"
+    t.integer  "dex_adjust"
+    t.integer  "con_adjust"
+    t.integer  "int_adjust"
+    t.integer  "wis_adjust"
+    t.integer  "chr_adjust"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", force: true do |t|
