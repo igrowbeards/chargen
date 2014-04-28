@@ -11,18 +11,20 @@
   %hr
   .form_group
     .row
-      .col-md-2
+      .col-md-1
         = f.input :strength
-      .col-md-2
         = f.input :dexterity
-      .col-md-2
         = f.input :constitution
-      .col-md-2
         = f.input :intelligence
-      .col-md-2
         = f.input :wisdom
-      .col-md-2
         = f.input :charisma
+      - if @character.new_record?
+        .col-md-4
+          %p Ability Scores:
+          - @character.new_ability_scores.each do |s|
+            %p
+              = s
+
   %hr
   .form_group
     .row
